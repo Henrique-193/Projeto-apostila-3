@@ -1,0 +1,317 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #181818;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+
+header {
+    background-color: #101010;
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 2px solid #ff6500;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+header p {
+    color: #bbbbbb;
+    margin-top: 8px;
+}
+
+/* Menu */
+
+nav {
+    background-color: #242424;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 16px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff6500;
+}
+
+/* Conteúdo principal */
+
+main {
+    width: 100%;
+}
+
+/* Banner */
+
+.banner {
+    background-color: #252525;
+    margin: 30px auto;
+    padding: 45px 25px;
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    border-left: 5px solid #ff6500;
+    border-radius: 8px;
+}
+
+.banner h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.banner p {
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+/* Produtos */
+
+.produtos {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.produtos > h2,
+.destaques > h2 {
+    margin-bottom: 25px;
+    border-left: 4px solid #ff6500;
+    padding-left: 12px;
+}
+
+.lista-produtos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    background-color: #252525;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    padding: 25px 20px;
+    flex: 1;
+    min-width: 0;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #ff6500;
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    margin-bottom: 5px;
+}
+
+/* Botões */
+
+.botao {
+    display: inline-block;
+    background-color: #ff6500;
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #d95300;
+}
+
+/* Destaques */
+
+.destaques {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+.lista-destaques {
+    display: flex;
+    gap: 20px;
+}
+
+.destaque {
+    flex: 1;
+    min-width: 0;
+    background-color: #252525;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.destaque:hover {
+    border-color: #ff6500;
+    transform: translateY(-4px);
+}
+
+.icone {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.destaque h3 {
+    color: #ff6500;
+    margin-bottom: 12px;
+}
+
+.destaque p {
+    color: #bbbbbb;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Chamada para ação */
+
+.chamada {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 40px 25px;
+    background-color: #252525;
+    border-top: 3px solid #ff6500;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.chamada h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.chamada p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Rodapé */
+
+footer {
+    background-color: #101010;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 50px;
+    color: #bbbbbb;
+}
+
+footer small {
+    display: block;
+    color: #ff6500;
+    margin-top: 12px;
+}
+
+/* Tablets */
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    .banner {
+        padding: 35px 20px;
+    }
+
+    .banner h2 {
+        font-size: 23px;
+    }
+
+    .lista-produtos {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .lista-destaques {
+        flex-wrap: wrap;
+    }
+
+    .destaque {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .chamada h2 {
+        font-size: 24px;
+    }
+}
+
+/* Celulares */
+
+@media screen and (max-width: 480px) {
+    nav {
+        gap: 18px;
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .banner h2 {
+        font-size: 21px;
+    }
+
+    .lista-produtos,
+    .lista-destaques {
+        flex-direction: column;
+    }
+
+    .card,
+    .destaque {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .chamada {
+        padding: 30px 18px;
+    }
+
+    .chamada h2 {
+        font-size: 21px;
+    }
+
+    .chamada p {
+        font-size: 14px;
+    }
+
+    .chamada .botao {
+        display: block;
+        width: 100%;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
